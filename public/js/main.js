@@ -12,7 +12,7 @@ const getInfo= async(event)=>{
       let cnamev=cname.value;
       let scodev=scode.value;
       let ccodev=ccode.value;
-       let url=`https://api.openweathermap.org/data/2.5/weather?q=${cnamev},${scodev},${ccodev}&appid=5d0d9b4988db271e63045ee6c48097cf`;
+       let url=`https://api.openweathermap.org/data/2.5/weather?q=${cnamev},${scodev},${ccodev}&units=metric&appid=5d0d9b4988db271e63045ee6c48097cf`;
        /*let url=`https://api.openweathermap.org/data/2.5/weather?q=${cnamev}&units=metric&appid=ee27960cfca0b51d1eff6feaa821040f`;*/
        const response=await fetch(url);
        const data= await response.json();

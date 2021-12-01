@@ -15,5 +15,9 @@
     "request": "^2.88.2"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//Ishasingh006/weather-app.git"
+  },
   "description": ""
 }
