@@ -1,15 +1,11 @@
 const express = require("express");
 const app = express();
-const hbs= require("hbs");
 const port= process.env.PORT || 3000;
 const path = require("path");
-const staticpath= path.join(__dirname,"public");
-app.set("views", path.join(__dirname,'../weatherapp/views'))
-app.set('view engine', 'hbs');
-app.use(express.static(staticpath));
+app.use(express.static("public"));
 
-app.get("", (req,res)=>{
-    res.render("index");
+app.get("/", function(req,res){
+  res.sendFile(__dirname+"/index.html");
 });
 app.listen(port, ()=>{
     console.log(`listening to port at ${port}`);
