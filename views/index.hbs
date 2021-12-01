@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>🌄 Weather App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+</head>
+
+<body>
+
+  <div class="time">
+    <script>
+      var date = new Date();
+      var hours = date.getHours();
+      var minutes = date.getMinutes();
+      var newformat = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      document.write(hours + ':' + minutes + ' ' + newformat);
+    </script>
+  </div>
+  <div class="date">
+    <script>
+      var Days = ['Sunday', 'Monday', 'Tuesday',
+        'Wednesday', 'Thursday', 'Friday', 'Saturday'
+      ];
+      var Months = ['January', 'February', 'March', 'April',
+        'May', 'June', 'July', 'August', 'September',
+        'October', 'November', 'December'
+      ];
+      var currentDay = new Date();
+      var day = Days[currentDay.getDay()];
+      var date = currentDay.getDate();
+      var month = Months[currentDay.getMonth()];
+      var year = currentDay.getFullYear();
+      document.write(day + ',' + date + ' ' + month + ' ' + year);
+    </script>
+  </div>
+  <div class="weather">
+    <form class="form-signin">
+      <h1>Want to Know weather of your place?</h1>
+      <input type="text" name="" id="cname" class="form-control top" placeholder="City Name" required autofocus>
+      <input type="text" name="" id="scode" class="form-control middle" placeholder="State Code" required autofocus>
+      <input type="text" name="" id="ccode" class="form-control bottom" placeholder="Country Code" required>
+      <button class="btn btn-lg btn-primary btn-block" id= "submitBtn" type="submit" value="search" >Check</button>
+    </form>
+  </div>
+
+    <h1 class="print"> Temperature of <span id="city">your city</span> is <span id="temp">_</span><sup>o</sup>C and there is <span id="desc">_</span>.</h1>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+  <footer>
+  <p class="foot">&copy; 2021  Isha  Rani</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
